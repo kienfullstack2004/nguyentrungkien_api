@@ -1,0 +1,156 @@
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "nkien9450@gmail.com",
+    "password": "123456789"
+}
+
+###
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "email": "nkien9450@gmail.com",
+    "username":"nguyentrungkien",
+    "password":"123456789"
+}
+
+###
+POST http://localhost:5000/post/create 
+Content-Type: application/json
+
+{
+    "title":"Bai post 3",
+    "des":"Bai post 3 dang duoc viet ....",
+    "image":"https://media.istockphoto.com/id/1182866691/photo/social-media-and-digital-online-concept-woman-using-smartphone-and-show-technology-icon.webp?a=1&b=1&s=612x612&w=0&k=20&c=oNVrc8GtlmzjSrPW0tA4vCnuw2RMvGvzHtr-fAhc4Z8=",
+    "author":"nguyentrungkien1",
+    "viewers":"12"
+}
+
+###
+GET http://localhost:5000/post/getPosts
+
+###
+POST http://localhost:5000/post/count/07ebb1c1-71b6-45ac-8652-9a6710425e4f
+Content-Type: application/json
+
+{
+  "count":"14"
+}
+
+###
+GET http://localhost:5000/post/commentAboutIpPost/18950711-31ba-46a9-9016-d8e480f3a926
+
+###
+// 
+GET http://localhost:5000/post/getOnePost/07ebb1c1-71b6-45ac-8652-9a6710425e4f
+
+###
+GET http://localhost:5000/alert/getAllAlert
+
+###
+POST http://localhost:5000/alert/create
+Content-Type: application/json
+
+{
+    "image":"https://media.istockphoto.com/id/1182866691/photo/social-media-and-digital-online"
+}
+
+###
+DELETE http://localhost:5000/alert/delete/de5836ee-6dd9-41ee-a0d8-e7ff9afd6f63
+
+###
+POST http://localhost:5000/courses/create 
+Content-Type: application/json
+
+{
+   "title":"Java Backend ",
+   "des":"Khoa hoc 1 dang duoc tao ra .... để giúp mọi người tìm hiểu chuyên sâu về các sử lý , vầccs phiên làm việc với database thông qua các cây API",
+    "image":"https://vtiacademy.edu.vn/upload/images/jb1-01(1).png",
+    "viewer":"2",
+    "price":"2000000" 
+}
+
+###
+//
+GET http://localhost:5000/courses/getAllCourses
+
+###
+GET http://localhost:5000/courses/getCourses
+
+
+
+###
+DELETE  http://localhost:5000/courses/delete/1adcb9fb-d0c2-40cb-ba06-d4b41b024bd0
+###
+POST http://localhost:5000/courses/update/1adcb9fb-d0c2-40cb-ba06-d4b41b024bd0
+Content-Type: application/json
+
+{
+   "title":"Khoa hoc 1",
+   "des":"Khoa hoc 1 dang duoc tao ra ....",
+    "image":"https://media.istockphoto.com/id/1182866691/photo/social-media-and-digital",
+    "viewer":"12",
+    "price":"100000"
+}
+
+###
+GET http://localhost:5000/post/getPostNew
+
+###
+POST http://localhost:5000/viewer/create 
+Content-Type: application/json
+
+{
+    "viewer":17,
+    "idrelative":"2665157f-6aa5-4c28-afd2-3c4ee11c088e"
+}
+
+###
+DELETE http://localhost:5000/post/delete/21b2e227-4817-4f53-b2b5-8f1080e516fd
+
+
+###
+POST http://localhost:5000/post/update/6222f0d7-1d6b-40af-983b-1078a0663fd8
+Content-Type: application/json
+
+{
+    "title":"Tổng Bí thư Tô Lâm: Tương lai thuộc về những dân tộc biết ấp ủ khát vọng lớn tiến xa đến các nước quốc gia trên thế giới",
+    "des":"Bai post 5 dang duoc viet ....",
+    "image":"https://media.istockphoto.com/id/1182866691/photo/social-media-and-digital-online-concept-woman-using-smartphone-and-show-technology-icon.webp?a=1&b=1&s=612x612&w=0&k=20&c=oNVrc8GtlmzjSrPW0tA4vCnuw2RMvGvzHtr-fAhc4Z8=",
+    "author":"nguyentrungkien1",
+    "viewers":1223
+}
+
+###
+POST http://localhost:5000/user/comment/create
+Content-Type: application/json
+
+{
+    "message":"qwewe",
+    "idpost":"eweqweqw",
+    "username":"Kien"
+}
+
+###
+GET http://localhost:5000/user/comment/getcomment
+
+###
+GET http://localhost:5000/user/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDkwZjBlLWEwM2QtNDk0My1iZWE3LTY4ODIwMWViZGNlMiIsInVzZXJuYW1lIjoibmd1eWVudHJ1bmdraWVuIiwiaWF0IjoxNzQ1Mjg5MTM3LCJleHAiOjE3NDU0NjE5Mzd9.cnlDoijGCwdgW8_X6RO-DI8wlGFR-EcODuo1W26EJk0
+
+
+###
+GET http://localhost:5000/user/getUsers
+
+###
+POST http://localhost:5000/user/update/2615e5c1-06ae-41e9-bdba-331ad653d8b8
+Content-Type: application/json
+
+{
+    "username":"nguyentrungkien",
+    "email":"nkien9450@gmail.com",
+    "avatar":"https://i.pinimg.com/736x/87/9a/b5/879ab5575e3233abb798d487d9c7808f.jpg"
+}
